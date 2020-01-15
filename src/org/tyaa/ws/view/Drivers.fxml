@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="pane" stylesheets="@../resources/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tyaa.ws.viewcontroller.DriversController">
+   <children>
+      <HBox layoutX="14.0" layoutY="14.0" styleClass="top-menu" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <Label text="Водители">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="15.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#goToSalesScreen" text="Доставки">
+               <HBox.margin>
+                  <Insets right="15.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#goToShopsScreen" text="Магазины">
+               <HBox.margin>
+                  <Insets right="15.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#goToBarrelsScreen" text="Бочки">
+               <HBox.margin>
+                  <Insets right="15.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#goToCarsScreen" text="Автомобили">
+               <HBox.margin>
+                  <Insets right="15.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#goToDebtsScreen" text="Долги">
+               <HBox.margin>
+                  <Insets right="15.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/images/driver.png" />
+               </image>
+               <HBox.margin>
+                  <Insets right="15.0" top="5.0" />
+               </HBox.margin>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#goToAddDriverScreen" text="Добавить" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="79.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#showDriverEditPhoneDialog" text="Телефон" AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="79.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#deleteDriver" text="Удалить" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="79.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <BorderPane layoutX="14.0" layoutY="59.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="119.0">
+         <bottom>
+            <TableView fx:id="driversTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <columns>
+                  <TableColumn fx:id="driverIdTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" sortable="true" text="№" />
+                  <TableColumn fx:id="nameTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" sortable="true" text="имя" />
+                  <TableColumn fx:id="phoneTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" sortable="true" text="телефон" />
+               </columns>
+            </TableView>
+         </bottom>
+         <center>
+            <Pagination fx:id="driversPagination" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

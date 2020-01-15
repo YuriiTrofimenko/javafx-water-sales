@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.controlsfx.control.textfield.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="600.0" styleClass="pane" stylesheets="@../resources/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tyaa.ws.viewcontroller.AddShopController">
+    <children>
+    <VBox spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <children>
+          <AnchorPane>
+             <children>
+                 <HBox layoutX="14.0" layoutY="14.0" styleClass="top-menu" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                   <children>
+                      <Label text="Добавить магазин">
+                         <HBox.margin>
+                            <Insets right="10.0" />
+                         </HBox.margin>
+                         <font>
+                            <Font name="System Bold" size="18.0" />
+                         </font>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                      </Label>
+                   </children>
+                   <padding>
+                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                   </padding>
+                </HBox>
+             </children>
+          </AnchorPane>
+            <AnchorPane prefHeight="450.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="300.0" prefWidth="570.0">
+                     <children>
+                        <HBox prefHeight="75.0">
+                           <children>
+                              <Label prefWidth="100.0" text="магазин">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <CustomTextField fx:id="nameCTextField" prefWidth="200.0" promptText="название магазина">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CustomTextField>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="75.0">
+                           <children>
+                              <Label prefWidth="100.0" text="предприятие">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <CustomTextField fx:id="legalNameCTextField" prefWidth="200.0" promptText="название предприятия">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CustomTextField>
+                              <Label prefWidth="200.0" text="юридическое название">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="25.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="75.0">
+                           <children>
+                              <Label prefWidth="100.0" text="адрес">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <CustomTextField fx:id="addressCTextField" prefWidth="400.0" promptText="адрес магазина">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CustomTextField>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="75.0">
+                           <children>
+                              <Label prefWidth="100.0" text="телефон">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <CustomTextField fx:id="phoneCTextField" prefWidth="200.0" promptText="контактный номер">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CustomTextField>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="25.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="75.0">
+                           <children>
+                              <Label prefWidth="100.0" text="начало сотр.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="bcDatePicker" prefWidth="200.0" />
+                              <Label prefWidth="200.0" text="дата начала сотрудничества">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="75.0">
+                           <children>
+                              <Label prefWidth="100.0" text="условия сотр.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <CustomTextField fx:id="cTermsCTextField" prefWidth="200.0" promptText="условия сотрудничества">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CustomTextField>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="25.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="75.0">
+                           <children>
+                              <Label prefWidth="100.0" text="удаленный">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <CheckBox fx:id="farCheckBox" mnemonicParsing="false" text="магазин за пределами города?">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="10.0" left="15.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+              <HBox alignment="CENTER_LEFT" spacing="20.0">
+                <children>
+                  <Button defaultButton="true" mnemonicParsing="false" onAction="#actionAddShop" text="Добавить">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#resetForm" text="Очистить">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                  </Button>
+                  <Button cancelButton="true" mnemonicParsing="false" onAction="#goToShopsScreen" text="Назад">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                  </Button>
+                </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+              </HBox>
+               </children>
+            </AnchorPane>
+      </children>
+      <padding>
+        <Insets />
+      </padding>
+    </VBox>
+  </children>
+</AnchorPane>

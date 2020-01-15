@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="pane" stylesheets="@../resources/style.css" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tyaa.ws.viewcontroller.DayReportsController">
+   <children>
+      <HBox layoutX="14.0" layoutY="14.0" styleClass="top-menu" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <Label text="Отчеты (день)">
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="15.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button mnemonicParsing="false" onAction="#goToSalesScreen" text="Назад">
+               <HBox.margin>
+                  <Insets right="15.0" top="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </HBox>
+      <ProgressIndicator fx:id="progressIndicator" layoutX="10.0" layoutY="10.0" maxHeight="30.0" maxWidth="30.0" minHeight="30.0" minWidth="30.0" prefHeight="30.0" prefWidth="30.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="30.0" />
+      <Button mnemonicParsing="false" onAction="#goToAddDayReportScreen" text="Добавить" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="79.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
+      <BorderPane layoutX="14.0" layoutY="59.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="119.0">
+          <top>
+              <TableView fx:id="dRepTotalTableView" prefHeight="130.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <columns>
+                  <TableColumn fx:id="dRepIdTableColumn" editable="false" maxWidth="0.0" minWidth="0.0" prefWidth="0.0" resizable="false" sortable="false" visible="false" />
+                  <TableColumn fx:id="dRepVolumeTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" sortable="true" text="объем л" />
+                  <TableColumn fx:id="dRepToPayTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="70.0" sortable="true" text="к оплате грн" />
+                  <TableColumn fx:id="dRepProfitNameTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="70.0" sortable="true" text="оплачено грн" />
+                  <TableColumn fx:id="dRepVolumeFarTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="65.0" sortable="true" text="объем уд. л" />
+                  <TableColumn fx:id="dRepProfitFarNameTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="60.0" sortable="true" text="оплачено уд. грн" />
+                  <!--TableColumn fx:id="dRepFarTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="90.0" sortable="true" text="удаленных" /-->
+                  <TableColumn fx:id="dRepDebtTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" sortable="true" text="долг грн" />
+                  <TableColumn fx:id="dRepDebtAmortTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="110.0" sortable="true" text="погашено дост. грн" />
+                  <TableColumn fx:id="dRepNoSalesDebtAmortTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="90.0" sortable="true" text="погашено без дост. грн" />
+                  <TableColumn fx:id="dRepTotalDebtAmortTableColumn" editable="false" maxWidth="0.0" minWidth="0.0" prefWidth="0.0" resizable="false" sortable="false" visible="false" />
+                  <TableColumn fx:id="dRepCleanCountTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="50.0" sortable="true" text="моек" />
+                  <TableColumn fx:id="dRepReplaceCountTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" sortable="true" text="замен сч." />
+                  <TableColumn fx:id="dRepAvPriceTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" sortable="true" text="сред. цена" />
+                  <TableColumn fx:id="dRepAvPriceNoFarTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="60.0" sortable="true" text="сред. цена Мар." />
+                  <TableColumn fx:id="dRepKmTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" sortable="true" text="пробег км" />
+                  <TableColumn fx:id="dRepFuelTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" sortable="true" text="км/т воды" />
+                  <!--TableColumn fx:id="dRepFuelCostTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" sortable="true" text="топливо, грн" /-->
+                  <!--TableColumn fx:id="dRepAdvertisingCostTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="85.0" sortable="true" text="реклама, грн" /-->
+                  <!--TableColumn fx:id="dRepOtherCostTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" sortable="true" text="другое, грн" /-->
+                  <TableColumn fx:id="dRepTotalProfitTableColumn" editable="false" maxWidth="0.0" minWidth="0.0" prefWidth="0.0" resizable="false" sortable="false" text="всего доход, грн." visible="false" />
+                  <!--TableColumn fx:id="dRepTotalCostTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="110.0" sortable="true" text="всего расход, грн." /-->
+                  <TableColumn fx:id="dRepTotalBalanceTableColumn" editable="false" maxWidth="0.0" minWidth="0.0" prefWidth="0.0" resizable="false" sortable="false" visible="false" />
+               </columns>
+            </TableView>
+          </top>
+          <bottom>
+            <TableView fx:id="dRepItemsTableView" prefHeight="50.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <columns>
+                  <TableColumn fx:id="dRepItemIdTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="0.0" sortable="true" text="№" />
+                  <TableColumn fx:id="carTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="60.0" sortable="true" text="№ авто" />
+                  <TableColumn fx:id="driverTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" sortable="true" text="водитель" />
+                  <TableColumn fx:id="volumeTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" sortable="true" text="объем л" />
+                  <TableColumn fx:id="toPayTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="70.0" sortable="true" text="к оплате грн" />
+                  <TableColumn fx:id="profitTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="60.0" sortable="true" text="оплачено грн" />
+                  <TableColumn fx:id="volumeFarTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="65.0" sortable="true" text="объем уд. л" />
+<!--                  <TableColumn fx:id="profitFarTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="85.0" sortable="true" text="оплачено уд. грн" />-->
+                  <TableColumn fx:id="toPayFarTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="85.0" sortable="true" text="к оплате уд. грн" />
+                  <!--TableColumn fx:id="farTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" sortable="true" text="удаленных" /-->
+                  <TableColumn fx:id="debtTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" sortable="true" text="долг грн" />
+                  <TableColumn fx:id="debtAmortTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="110.0" sortable="true" text="погашено грн" />
+                  <TableColumn fx:id="cleanCountTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="70.0" sortable="true" text="моек" />
+                  <TableColumn fx:id="replaceCountTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" sortable="true" text="замен сч." />
+                  <TableColumn fx:id="kMTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" sortable="true" text="пробег км" />
+                  <TableColumn fx:id="fuelTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" sortable="true" text="км/т воды" />
+                  <!--TableColumn fx:id="fuelCostTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" sortable="true" text="топливо, грн" /-->
+                  <!--TableColumn fx:id="advertisingCostTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" sortable="true" text="реклама, грн" /-->
+                  <!--TableColumn fx:id="otherCostTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" sortable="true" text="другое, грн" /-->
+                  <TableColumn fx:id="noticeTableColumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" sortable="true" text="примечание" />
+               </columns>
+            </TableView>
+         </bottom>
+         <center>
+            <Pagination fx:id="dRepItemsPagination" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+      <Label layoutX="97.0" layoutY="86.0" text="Открыть отчет за: " AnchorPane.leftAnchor="110.0" AnchorPane.topAnchor="79.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Label>
+      <DatePicker fx:id="datePicker" layoutX="238.0" layoutY="82.0" AnchorPane.leftAnchor="238.0" AnchorPane.topAnchor="82.0" />
+      <HBox layoutX="426.0" layoutY="78.0" prefHeight="37.0" AnchorPane.leftAnchor="426.0" AnchorPane.topAnchor="78.0">
+         <children>
+            <CheckBox fx:id="intervalCheckBox" mnemonicParsing="false" text="Период до: ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </CheckBox>
+            <DatePicker fx:id="datePicker2">
+               <HBox.margin>
+                  <Insets right="10.0" top="4.0" />
+               </HBox.margin></DatePicker>
+            <Button mnemonicParsing="false" onAction="#showDelDayReportDialog" text="Удалить">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+      
+   </children>
+</AnchorPane>

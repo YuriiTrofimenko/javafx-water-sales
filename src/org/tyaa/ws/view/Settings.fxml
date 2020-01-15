@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.controlsfx.control.textfield.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="600.0" styleClass="pane" stylesheets="@../resources/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tyaa.ws.viewcontroller.SettingsController">
+    <children>
+    <VBox spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <children>
+          <AnchorPane>
+             <children>
+                 <HBox layoutX="14.0" layoutY="14.0" styleClass="top-menu" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                   <children>
+                      <Label text="Настройки">
+                         <HBox.margin>
+                            <Insets right="10.0" />
+                         </HBox.margin>
+                         <font>
+                            <Font name="System Bold" size="18.0" />
+                         </font>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                      </Label>
+                   </children>
+                   <padding>
+                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                   </padding>
+                </HBox>
+             </children>
+          </AnchorPane>
+            <AnchorPane prefHeight="450.0" prefWidth="200.0">
+               <children>
+                  <VBox prefHeight="300.0" prefWidth="570.0">
+                     <children>
+                        <HBox prefHeight="75.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefWidth="200.0" text="названия воды">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <ListView fx:id="waterTypesListView" prefHeight="200.0" prefWidth="200.0" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <CustomTextField fx:id="waterTypeCTextField" prefWidth="200.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="15.0" top="30.0" />
+                                       </VBox.margin>
+                                    </CustomTextField>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#addWaterType" text="Добавить">
+                                             <HBox.margin>
+                                                <Insets right="15.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#deleteWaterType" text="Удалить" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="75.0">
+                           <children>
+                              <VBox prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Label prefWidth="200.0" text="типы емкости">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="5.0" top="5.0" />
+                                       </padding>
+                                    </Label>
+                                    <ListView fx:id="capacitiesListView" prefHeight="200.0" prefWidth="200.0" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox>
+                                 <children>
+                                    <CustomTextField fx:id="capacityCTextField" prefWidth="200.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets bottom="15.0" top="30.0" />
+                                       </VBox.margin>
+                                    </CustomTextField>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onAction="#addCapacity" text="Добавить">
+                                             <HBox.margin>
+                                                <Insets right="15.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#deleteCapacity" text="Удалить" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="75.0">
+                           <children>
+                              <Label prefWidth="300.0" text="Периодичность чистки бочек (в месяцах):">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="5.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="75.0">
+                           <children>
+                              <Label prefWidth="100.0" text="нормальная">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <CustomTextField fx:id="сleaningTCTimeCTextField" prefWidth="100.0" promptText="месяцев">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </CustomTextField>
+                              <Button mnemonicParsing="false" onAction="#setCleaningTypicalCycleTime" text="Применить">
+                                <HBox.margin>
+                                   <Insets right="15.0" />
+                                </HBox.margin>
+                              </Button>
+                              <Label prefWidth="200.0" text="целое или дробное число">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="75.0">
+                           <children>
+                              <Label prefWidth="100.0" text="максимальная">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <CustomTextField fx:id="сleaningOCTimeCTextField" prefWidth="100.0" promptText="месяцев">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </CustomTextField>
+                              <Button mnemonicParsing="false" onAction="#setCleaningOverdueCycleTime" text="Применить">
+                                <HBox.margin>
+                                   <Insets right="15.0" />
+                                </HBox.margin>
+                              </Button>
+                              <Label prefWidth="200.0" text="целое или дробное число">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="15.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="75.0">
+                           <children>
+                              <Label prefWidth="100.0" text="мин. остаток %">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <CustomTextField fx:id="allowedRestPercent" prefWidth="100.0" promptText="от 1 до 99 %">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </CustomTextField>
+                              <Button mnemonicParsing="false" onAction="#setAllowedRestPercent" text="Применить">
+                                <HBox.margin>
+                                   <Insets right="15.0" />
+                                </HBox.margin>
+                              </Button>
+                              <Label prefWidth="200.0" text="минимальный остаток воды">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="25.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets left="15.0" right="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane>
+               <children>
+              <HBox alignment="CENTER_LEFT" spacing="20.0">
+                <children>
+                  <!--Button defaultButton="true" mnemonicParsing="false" text="Добавить">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                  </Button>
+                  <Button mnemonicParsing="false" text="Очистить">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                  </Button-->
+                  <Button cancelButton="true" mnemonicParsing="false" onAction="#goToSalesScreen" text="Назад">
+                        <font>
+                           <Font size="14.0" />
+                        </font>
+                  </Button>
+                </children>
+                     <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </padding>
+              </HBox>
+               </children>
+            </AnchorPane>
+      </children>
+      <padding>
+        <Insets />
+      </padding>
+    </VBox>
+  </children>
+</AnchorPane>

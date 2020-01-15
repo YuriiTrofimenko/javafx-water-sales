@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import org.controlsfx.control.textfield.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="600.0" styleClass="pane" stylesheets="@../resources/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.tyaa.ws.viewcontroller.AddBarrelController">
+    <children>
+    <VBox spacing="20.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+      <children>
+          <AnchorPane>
+             <children>
+                 <HBox layoutX="14.0" layoutY="14.0" styleClass="top-menu" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                   <children>
+                      <Label text="Добавить бочку">
+                         <HBox.margin>
+                            <Insets right="10.0" />
+                         </HBox.margin>
+                         <font>
+                            <Font name="System Bold" size="18.0" />
+                         </font>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                      </Label>
+                   </children>
+                   <padding>
+                      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                   </padding>
+                </HBox>
+             </children>
+          </AnchorPane>
+            <AnchorPane prefHeight="365.0" prefWidth="570.0">
+               <children>
+                  <VBox prefHeight="365.0" prefWidth="570.0">
+                     <children>
+                        <HBox prefHeight="75.0">
+                           <children>
+                              <Label prefWidth="100.0" text="магазин">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <CustomTextField fx:id="shopCTextField" prefWidth="200.0" promptText="название магазина">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CustomTextField>
+                              <Label prefWidth="200.0" text="из списка существующих">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="75.0">
+                           <children>
+                              <Label prefWidth="100.0" text="цена, грн/л">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <CustomTextField fx:id="priceCTextField" prefWidth="200.0" promptText="гривен за литр">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CustomTextField>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="25.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="75.0">
+                           <children>
+                              <Label prefWidth="100.0" text="назв. воды">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <CustomTextField fx:id="typeCTextField" prefWidth="200.0" promptText="тип бочки">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CustomTextField>
+                              <Label prefWidth="200.0" text="из списка существующих">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="75.0">
+                           <children>
+                              <Label prefWidth="100.0" text="емкость, л">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <CustomTextField fx:id="capacityCTextField" prefWidth="200.0" promptText="стандартная емкость">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CustomTextField>
+                              <Label prefWidth="200.0" text="из списка существующих">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="25.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="75.0">
+                           <children>
+                              <Label prefWidth="100.0" text="посл. чист.">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="lastCleanDatePicker" prefWidth="200.0" />
+                              <Label prefWidth="200.0" text="дата последней чистки">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="25.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="75.0">
+                           <children>
+                              <Label prefWidth="100.0" text="разрядность">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <CustomTextField fx:id="positionsCTextField" prefWidth="200.0" promptText="разрядность счетчика">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CustomTextField>
+                              <Label prefWidth="200.0" text="5, 6 или 7">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox prefHeight="75.0">
+                           <children>
+                              <Label prefWidth="100.0" text="счетчик">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <CustomTextField fx:id="countCTextField" prefWidth="200.0" promptText="показания счетчика">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CustomTextField>
+                              <Label fx:id="positionLabel" prefWidth="200.0" text="не более 6 знаков">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="15.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <VBox.margin>
+                              <Insets bottom="25.0" />
+                           </VBox.margin>
+                        </HBox>
+                    <HBox alignment="CENTER_LEFT" spacing="20.0">
+                      <children>
+                        <Button defaultButton="true" mnemonicParsing="false" onAction="#actionAddBarrel" text="Добавить">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#resetForm" text="Очистить">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                        </Button>
+                        <Button cancelButton="true" mnemonicParsing="false" onAction="#goToBarrelsScreen" text="Назад">
+                              <font>
+                                 <Font size="14.0" />
+                              </font>
+                        </Button>
+                      </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                    </HBox>
+                        <!--HBox maxHeight="0.0" prefHeight="0.0" visible="false">
+                           <children>
+                              <Label maxHeight="0.0" prefHeight="0.0" prefWidth="100.0" text="замена">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <CheckBox fx:id="replaceCheckBox" maxHeight="0.0" mnemonicParsing="false" prefHeight="0.0" selected="true" text="выполнена замена бочки?">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </CheckBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </HBox-->
+                     </children>
+                     <padding>
+                        <Insets left="15.0" right="10.0" top="10.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </AnchorPane>
+      </children>
+      <padding>
+        <Insets />
+      </padding>
+    </VBox>
+  </children>
+</AnchorPane>
